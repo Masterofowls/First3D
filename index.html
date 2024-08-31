@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное меню с Three.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container"></div>
+<div class="menu">
+    <h1>Меню Игры</h1>
+    <button id="startButton">Начать игру</button>
+    <button id="settingsButton">Настройки</button>
+    <button id="exitButton">Выйти</button>
+</div>
+
+<div id="settingsPopup" class="popup hidden">
+    <h2>Настройки Куба</h2>
+    <label for="sizeRange">Размер куба:</label>
+    <input type="range" id="sizeRange" min="1" max="10" step="0.1" value="3">
+    <br>
+    <label for="colorPicker">Цвет куба:</label>
+    <input type="color" id="colorPicker" value="#00ff00">
+    <br>
+    <label for="textureSelect">Текстура куба:</label>
+    <select id="textureSelect">
+        <option value="none">Без текстуры</option>
+        <option value="brick">Кирпичная стена</option>
+        <option value="concrete">Бетонная стена</option>
+    </select>
+    <br>
+    <label for="shaderCheckbox">Включить шейдеры:</label>
+    <input type="checkbox" id="shaderCheckbox">
+    <br>
+    <button id="applySettings">Применить</button>
+    <button id="closeSettings">Закрыть</button>
+</div>
+
+<script src="dist/bundle.js"></script>
+</body>
+</html>
